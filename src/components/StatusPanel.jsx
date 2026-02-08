@@ -29,7 +29,7 @@ const StatusPanel = ({ currentPoint, speed, status }) => {
       </div>
       
       <div className="status-item">
-        <span className="status-label">Speed:</span>
+        <span className="status-label">Playback Speed:</span>
         <span className="status-value">{speed.toFixed(1)} km/h</span>
       </div>
       

@@ -4,19 +4,23 @@ const Controls = ({ isPlaying, speedMultiplier, onPlayPause, onReset, onSpeedCha
   return (
     <div className="controls">
       <div className="control-group">
-        <button onClick={onPlayPause}>
-          {isPlaying ? '⏸️ Pause' : '▶️ Play'}
+      <button onClick={onPlayPause}>
+        {isPlaying ? '⏸️ Pause Simulation' : '▶️ Start Simulation'}
         </button>
-        <button onClick={onReset}>🔄 Reset</button>
+
+       <button onClick={onReset}>
+        🔄 Reset Position
+        </button>
       </div>
-      
       <div className="control-group">
         <div className="speed-control">
           <label htmlFor="speedSelect">Speed:</label>
           <select 
-            id="speedSelect"
-            value={speedMultiplier}
-            onChange={(e) => onSpeedChange(parseFloat(e.target.value))}
+          id="speedSelect"
+          value={speedMultiplier}
+          title="Adjust simulation playback speed"
+          aria-label="Simulation Speed Selector"
+          onChange={(e) => onSpeedChange(parseFloat(e.target.value))}
           >
             <option value={0.5}>0.5x</option>
             <option value={1}>1x</option>
