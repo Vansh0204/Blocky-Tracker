@@ -172,7 +172,7 @@ function App() {
         <StatusPanel
           currentPoint={currentPoint}
           speed={getCurrentSpeed()}
-          status={isPlaying ? 'Moving' : 'Stopped'}
+          status={isPlaying ? 'Simulation Running' : 'Simulation Paused'}
         />
       </div>
 
@@ -182,7 +182,7 @@ function App() {
             center={[26.8467, 80.9462]}
             zoom={13}
             style={{ height: '100%', width: '100%' }}
-            zoomControl={false}
+            zoomControl={false} // Custom UI controls used instead
           >
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
